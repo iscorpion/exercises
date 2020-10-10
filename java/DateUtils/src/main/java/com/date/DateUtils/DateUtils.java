@@ -1,7 +1,5 @@
 package com.date.DateUtils;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -10,13 +8,12 @@ import java.time.temporal.ChronoUnit;
 /**
  * A class for general utilities involving dates. Using Java 8 Dates instead of old Java Dates
  */
-@Slf4j
 public class DateUtils {
 
     private static final String BR_FORMAT = "dd/MM/yyyy";
 
     public static void daysIntoYear() {
-        log.info("We are {} days into the year.", daysIntoTheYear());
+        System.out.println("We are " + daysIntoTheYear() +  " days into the year.");
     }
 
     private static int daysIntoTheYear() {
@@ -27,7 +24,7 @@ public class DateUtils {
     }
 
     public static void whatDayIsToday() {
-        log.info("Today is {}.", formatDateBR(LocalDate.now()));
+        System.out.println("Today is " + formatDateBR(LocalDate.now()));
     }
 
     public static String formatDateBR(final LocalDate date) {
